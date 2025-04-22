@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import BestLawyer from '../BestLawyer/BestLawyer';
+import IndividualDetails from '../IndividualDetails/IndividualDetails';
 
 const Lawyer = ({ data }) => {
     const [showAll, setShowAll] = useState(false);
@@ -12,15 +13,17 @@ const Lawyer = ({ data }) => {
             <div className='w-11/12 mx-auto text-center mt-10 mb-10'>
                 <h1 className='text-3xl font-bold mb-3'>Our Best Lawyers</h1>
                 <p>
-                    Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience. 
-                    Whether it's a routine <br /> checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.
+                    Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.
                 </p>
             </div>
 
             <div className='grid grid-cols-2 gap-4 w-11/12 mx-auto'>
                 {
                     displayedLawyers.map((bestlawyer) => (
-                        <BestLawyer key={bestlawyer.id} bestlawyer={bestlawyer} />
+                        <BestLawyer
+                            key={bestlawyer.id}
+                            bestlawyer={bestlawyer}
+                        />
                     ))
                 }
             </div>
@@ -35,6 +38,7 @@ const Lawyer = ({ data }) => {
                     </button>
                 </div>
             )}
+            
         </div>
     );
 };

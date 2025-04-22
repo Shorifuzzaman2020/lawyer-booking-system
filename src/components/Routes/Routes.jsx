@@ -6,6 +6,7 @@ import {
 import Root from '../Root/Root';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Home from '../pages/Home/Home';
+import IndividualDetails from '../IndividualDetails/IndividualDetails';
   const router = createBrowserRouter([
     {
       path: "/",
@@ -17,6 +18,15 @@ import Home from '../pages/Home/Home';
             loader:()=>fetch('lawerData.json'),
             path: "/",
             Component: Home,
+        },
+        {
+          path: '/showDetails/:id',
+          loader: async ({ params }) => {
+            const res = await fetch('/lawerData.json');
+            const data = await res.json();
+            return data.find(lawyer => lawyer.id.toString() === params.id);
+          },
+          Component: IndividualDetails,
         }
       ]
     },
