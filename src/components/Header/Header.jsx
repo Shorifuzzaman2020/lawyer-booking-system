@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100 w-11/12 mx-auto">
+        <div className="navbar bg-base-100 w-11/12 mx-auto mb-2">
   <div className="navbar-start">
     
     <div className='flex justify-center items-center'>
