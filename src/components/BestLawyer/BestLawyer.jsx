@@ -32,7 +32,7 @@ const BestLawyer = ({ bestlawyer}) => {
                     <div className="card-actions justify-center">
                         <Link to={`/showDetails/${bestlawyer.id}`}>
                         <button
-                            className="border-blue-300 border-2 px-32 py-2 text-blue-500 font-bold rounded-3xl"
+                            className="border-blue-300 border-2 px-32 py-2 text-blue-500 font-bold rounded-3xl hover:cursor-pointer"
                         >
                             View Details
                         </button>

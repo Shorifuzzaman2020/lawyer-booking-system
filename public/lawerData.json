@@ -8,7 +8,7 @@
       "consultation_fee": 150,
       "criminal_expert": true,
       "image": "https://i.ibb.co.com/PsNczxtn/images-11.jpg",
-      "availability": ["Monday", "Wednesday", "Friday"]
+      "availability": ["Saturday","Monday","Tuesday","Wednesday", "Friday"]
     },
     {
       "id": 2,

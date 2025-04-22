@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import BestLawyer from '../BestLawyer/BestLawyer';
 import IndividualDetails from '../IndividualDetails/IndividualDetails';
+import CountUpOnVisible from '../../CountUpOnVisible/CountUpOnVisible';
 
 const Lawyer = ({ data }) => {
     const [showAll, setShowAll] = useState(false);
@@ -38,6 +39,36 @@ const Lawyer = ({ data }) => {
                     </button>
                 </div>
             )}
+            <div>
+                <div className='text-center w-11/12 mx-auto mt-12'>
+                    <h1 className='text-3xl font-bold mb-5'>We Provide Best Law Services</h1>
+                    <p className='mb-5'>Our platform connects you with verified, experienced Lawyers across various specialities — all at your convenience. </p>
+
+                        <div className='flex items-center justify-center gap-6'>
+                        <div className='bg-gray-100 rounded-lg shadow p-10'>
+                            <img src="assets/success-doctor.png" alt="" />
+                            <CountUpOnVisible target={199} />
+                            <p>Total Lawyer</p>
+                        </div>
+                        <div className='bg-gray-100 rounded-lg shadow p-10'>
+                            <img src="assets/success-patients.png" alt="" />
+                            <CountUpOnVisible target={2100} />
+                            <p>Cases Initiated</p>
+                        </div>
+                        <div className='bg-gray-100 rounded-lg shadow p-10'>
+                            <img src="assets/success-staffs.png" alt="" />
+                            <CountUpOnVisible target={565} />
+                            <p>Total Staff</p>
+                        </div>
+                        <div className='bg-gray-100 rounded-lg shadow p-10'>
+                            <img src="assets/success-review.png" alt="" />
+                            <CountUpOnVisible target={345} />
+                            <p>Total Reviews</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            
             
         </div>
     );

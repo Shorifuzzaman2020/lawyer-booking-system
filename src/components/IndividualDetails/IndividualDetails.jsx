@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { MdWarningAmber } from 'react-icons/md';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const IndividualDetails = () => {
     const bestlawyer = useLoaderData();
+    
     return (
-        
         
         <div className='w-11/12 mx-auto'>
             
@@ -100,7 +100,9 @@ const IndividualDetails = () => {
                     </span>
                 </div>
                 <div>
+                    <Link to={`/showDetails/${bestlawyer.id}/bookingDetails`}>
                     <button className='bg-green-500 px-96 py-2 rounded-3xl text-white font-bold'>Book Appointment Now</button>
+                    </Link>
                 </div>
             </div>
         </div>

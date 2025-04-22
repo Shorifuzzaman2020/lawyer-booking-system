@@ -1,9 +1,8 @@
 import React from 'react';
 import Banner from '../../Banner/Banner';
-import BestLawyer from '../../BestLawyer/BestLawyer';
 import { useLoaderData } from 'react-router';
 import Lawyer from '../../Lawyer/Lawyer';
-import IndividualDetails from '../../IndividualDetails/IndividualDetails';
+
 
 const Home = () => {
     const data=useLoaderData();
