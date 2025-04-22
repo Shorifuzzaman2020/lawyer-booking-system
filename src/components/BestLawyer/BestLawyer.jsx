@@ -1,9 +1,10 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import Home from '../pages/Home/Home';
 import Lawyer from '../Lawyer/Lawyer';
 
 const BestLawyer = ({bestlawyer}) => {
     console.log(bestlawyer);
+    
     return (
         <div className='mt-8 text-center'>
             
