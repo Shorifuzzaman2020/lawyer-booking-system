@@ -1,0 +1,135 @@
+[
+    {
+      "id": 1,
+      "name": "Alicia Bennett",
+      "specialty": "Criminal Law",
+      "experience": 12,
+      "licence_number": "CRIM123456",
+      "consultation_fee": 150,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/PsNczxtn/images-11.jpg",
+      "availability": ["Monday", "Wednesday", "Friday"]
+    },
+    {
+      "id": 2,
+      "name": "Marcus Holt",
+      "specialty": "Criminal Law",
+      "experience": 15,
+      "licence_number": "CRIM654321",
+      "consultation_fee": 200,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/Cs734SwZ/images-10.jpg",
+      "availability": ["Tuesday", "Thursday"]
+    },
+    {
+      "id": 3,
+      "name": "Lana Guerrero",
+      "specialty": "Criminal Defense",
+      "experience": 8,
+      "licence_number": "CRIM345678",
+      "consultation_fee": 180,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/ksvYVYZz/feature-e6b3ee8f-d0a2-43c3-b898-0574c433e688.webp",
+      "availability": ["Monday", "Tuesday"]
+    },
+    {
+      "id": 4,
+      "name": "Ethan Price",
+      "specialty": "Criminal Law",
+      "experience": 10,
+      "licence_number": "CRIM111222",
+      "consultation_fee": 170,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/GfzbwbxY/images-9.jpg",
+      "availability": ["Wednesday", "Thursday"]
+    },
+    {
+      "id": 5,
+      "name": "Selena McCarthy",
+      "specialty": "Criminal Defense",
+      "experience": 6,
+      "licence_number": "CRIM789456",
+      "consultation_fee": 160,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/8nRmsMyj/images-8.jpg",
+      "availability": ["Friday", "Saturday"]
+    },
+    {
+      "id": 6,
+      "name": "Brandon Lee",
+      "specialty": "White Collar Crimes",
+      "experience": 9,
+      "licence_number": "CRIM333444",
+      "consultation_fee": 190,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/QjQ9vzv6/images-7.jpg",
+      "availability": ["Monday", "Thursday"]
+    },
+    {
+      "id": 7,
+      "name": "Nina Alvarez",
+      "specialty": "Criminal Appeals",
+      "experience": 11,
+      "licence_number": "CRIM112233",
+      "consultation_fee": 175,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/8DkZvy5L/images-6.jpg",
+      "availability": ["Tuesday", "Friday"]
+    },
+    {
+      "id": 8,
+      "name": "Gavin Kim",
+      "specialty": "Juvenile Crimes",
+      "experience": 7,
+      "licence_number": "CRIM556677",
+      "consultation_fee": 165,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/N2ZHZfvS/images-5.jpg",
+      "availability": ["Wednesday", "Saturday"]
+    },
+    {
+      "id": 9,
+      "name": "Jasmine Wright",
+      "specialty": "Drug Offenses",
+      "experience": 13,
+      "licence_number": "CRIM998877",
+      "consultation_fee": 185,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/0pgqkCq6/images-4.jpg",
+      "availability": ["Monday", "Thursday"]
+    },
+    {
+      "id": 10,
+      "name": "Derrick Stone",
+      "specialty": "Criminal Litigation",
+      "experience": 14,
+      "licence_number": "CRIM443322",
+      "consultation_fee": 210,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/KxQj9mYC/images-3.jpg",
+      "availability": ["Tuesday", "Friday"]
+    },
+    {
+      "id": 11,
+      "name": "Victoria Chan",
+      "specialty": "Homicide Cases",
+      "experience": 16,
+      "licence_number": "CRIM121314",
+      "consultation_fee": 220,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/MxTYzpBN/images-2.jpg",
+      "availability": ["Monday", "Wednesday"]
+    },
+    {
+      "id": 12,
+      "name": "Jared Dawson",
+      "specialty": "Sex Crimes Defense",
+      "experience": 10,
+      "licence_number": "CRIM159357",
+      "consultation_fee": 195,
+      "criminal_expert": true,
+      "image": "https://i.ibb.co.com/q6V7BGM/images-1.jpg",
+      "availability": ["Thursday", "Saturday"]
+    }
+  ]
+  

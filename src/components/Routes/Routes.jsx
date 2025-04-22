@@ -14,6 +14,7 @@ import Home from '../pages/Home/Home';
       children:[
         {
             index: true,
+            loader:()=>fetch('lawerData.json'),
             path: "/",
             Component: Home,
         }
