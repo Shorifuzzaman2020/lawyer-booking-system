@@ -1,8 +1,14 @@
 
+import { useNavigate } from 'react-router-dom';
 
-import { Link } from "react-router";
+const BestLawyer = ({ bestlawyer }) => {
+    const navigate = useNavigate();
 
-const BestLawyer = ({ bestlawyer}) => {
+    const handleViewDetails = () => {
+        localStorage.setItem('selectedLawyer', JSON.stringify(bestlawyer));
+        navigate('/showDetails');
+    };
+
     return (
         <div className='mt-8 text-center'>
             <div className="card card-side bg-base-100 shadow-sm">
@@ -30,17 +36,15 @@ const BestLawyer = ({ bestlawyer}) => {
                         <p className='text-start'>License No: {bestlawyer.licence_number}</p>
                     </div>
                     <div className="card-actions justify-center">
-                        <Link to={`/showDetails/${bestlawyer.id}`}>
                         <button
+                            onClick={handleViewDetails}
                             className="border-blue-300 border-2 px-32 py-2 text-blue-500 font-bold rounded-3xl hover:cursor-pointer"
                         >
                             View Details
                         </button>
-                        </Link>
                     </div>
                 </div>
             </div>
-            
         </div>
     );
 };

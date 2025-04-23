@@ -1,45 +1,60 @@
-import React from 'react';
 
+import React from 'react';
 import {
-    createBrowserRouter,
-  } from "react-router";
+  createBrowserRouter,
+} from "react-router-dom"; 
 import Root from '../Root/Root';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Home from '../pages/Home/Home';
 import IndividualDetails from '../IndividualDetails/IndividualDetails';
 import BookingDetails from '../BookingDetails/BookingDetails';
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      Component: Root,
-      errorElement:<ErrorPage></ErrorPage>,
-      children:[
-        {
-            index: true,
-            loader:()=>fetch('lawerData.json'),
-            path: "/",
-            Component: Home,
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Root,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        loader: () => fetch('/lawerData.json'), 
+        Component: Home,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: '/showDetails',
+        loader: async () => {
+          const storedData = localStorage.getItem('selectedLawyer');
+      
+          if (!storedData) {
+            throw new Error("No lawyer selected");
+          }
+      
+          const lawyer = JSON.parse(storedData);
+          return lawyer;
         },
-        {
-          path: '/showDetails/:id',
-          loader: async ({ params }) => {
-            const res = await fetch('/lawerData.json');
-            const data = await res.json();
-            return data.find(lawyer => lawyer.id.toString() === params.id);
-          },
-          Component: IndividualDetails,
+        Component: IndividualDetails,
+        errorElement: <ErrorPage />
+      }
+      ,
+      {
+        path: '/bookingDetails',
+        loader: async () => {
+          const storedData = localStorage.getItem('bookedLawyers');
+          
+          if (!storedData) {
+            throw new Error("No booking data found in localStorage");
+          }
+      
+          const lawyers = JSON.parse(storedData);
+          return lawyers;
         },
-        {
-          path: '/showDetails/:id/bookingDetails',
-          loader: async ({ params }) => {
-            const res = await fetch('/lawerData.json');
-            const data = await res.json();
-            return data.find(lawyer => lawyer.id.toString() === params.id);
-          },
-          Component: BookingDetails,
-        }
-      ]
-    },
-  ]);
+        Component: BookingDetails,
+        errorElement: <ErrorPage />
+      }
+      
+    ]
+  },
+]);
 
 export default router;

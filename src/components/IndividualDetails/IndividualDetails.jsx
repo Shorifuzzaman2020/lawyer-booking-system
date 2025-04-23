@@ -1,10 +1,21 @@
 
 import React from 'react';
 import { MdWarningAmber } from 'react-icons/md';
-import { Link, useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const IndividualDetails = () => {
     const bestlawyer = useLoaderData();
+    
+    const handleBookingClick = () => {
+        const existingBookings = JSON.parse(localStorage.getItem('bookedLawyers')) || [];
+    
+        const isAlreadyBooked = existingBookings.some(lawyer => lawyer.id === bestlawyer.id);
+        if (!isAlreadyBooked) {
+            const updatedBookings = [...existingBookings, bestlawyer];
+            localStorage.setItem('bookedLawyers', JSON.stringify(updatedBookings));
+        }
+    };
+    
     
     return (
         
@@ -100,8 +111,8 @@ const IndividualDetails = () => {
                     </span>
                 </div>
                 <div>
-                    <Link to={`/showDetails/${bestlawyer.id}/bookingDetails`}>
-                    <button className='bg-green-500 px-96 py-2 rounded-3xl text-white font-bold'>Book Appointment Now</button>
+                    <Link to='/bookingDetails'>
+                    <button onClick={handleBookingClick} className='bg-green-500 px-96 py-2 rounded-3xl text-white font-bold'>Book Appointment Now</button>
                     </Link>
                 </div>
             </div>
