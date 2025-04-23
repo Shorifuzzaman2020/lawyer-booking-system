@@ -75,7 +75,7 @@ const BookingDetails = () => {
     const updatedLawyers = bookedLawyers.filter((lawyer) => lawyer.id !== id);
     setBookedLawyers(updatedLawyers);
     localStorage.setItem('bookedLawyers', JSON.stringify(updatedLawyers));
-    toast.success(`Appointment cancelled successfully!`);
+    toast.success("Appointment cancelled successfully!");
   };
 
   return (
