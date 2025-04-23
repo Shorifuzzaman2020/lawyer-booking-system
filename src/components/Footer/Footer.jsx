@@ -23,10 +23,10 @@ const Footer = () => {
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4 text-2xl">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+                    <a href="https://www.facebook.com/share/1EWqT1kjXf/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+                    <a href="https://x.com/Shorifuzzaman22" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
+                    <a href="https://www.youtube.com/@csestudentsschool9897" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
                 </div>
             </nav>
         </footer>

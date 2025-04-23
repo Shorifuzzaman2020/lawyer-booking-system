@@ -38,7 +38,7 @@ const BestLawyer = ({ bestlawyer }) => {
                     <div className="card-actions justify-center">
                         <button
                             onClick={handleViewDetails}
-                            className="border-blue-300 border-2 px-5 lg:px-32 py-2 text-blue-500 font-bold rounded-3xl hover:cursor-pointer"
+                            className="border-blue-300 border-2 px-5 lg:px-46 py-2 text-blue-500 font-bold rounded-3xl hover:cursor-pointer"
                         >
                             View Details
                         </button>

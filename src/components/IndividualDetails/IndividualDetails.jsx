@@ -73,7 +73,7 @@ const IndividualDetails = () => {
                     </div>
                     <div className='lg:flex items-center gap-3'>
                         Availability:
-                        <div className="sm:flex-col lg:flex-row gap-3">
+                        <div className="sm:flex-row lg:flex gap-3">
                             {bestlawyer.availability?.map((slot, index) => (
                                 <ul className='bg-yellow-50 text-yellow-500 border-2 border-amber-600 px-3 py-1 rounded-3xl' key={index}>
                                     {slot}
@@ -128,7 +128,7 @@ const IndividualDetails = () => {
                 <div>
                     <button
                         onClick={handleBookingClick}
-                        className='bg-green-500 px-6 lg:px-96 py-2 rounded-3xl text-white font-bold'
+                        className='bg-green-500 px-6 lg:px-96 py-2 rounded-3xl text-white font-bold hover:cursor-pointer'
                     >
                         Book Appointment Now
                     </button>
