@@ -15,13 +15,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorDesign />,
     children: [
       {
         index: true,
         loader: () => fetch('/lawerData.json'), 
         Component: Home,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorDesign />
       },
       {
         path: '/showDetails',
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
           return lawyer;
         },
         Component: IndividualDetails,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorDesign/>
       }
       ,
       {
@@ -52,12 +52,12 @@ const router = createBrowserRouter([
           return lawyers;
         },
         Component: BookingDetails,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorDesign />
       },
       {
         path:'/showBlogs',
         Component: Blogs,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorDesign />
       },
       {
         path:'/errorPage',

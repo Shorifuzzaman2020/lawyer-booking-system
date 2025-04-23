@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 import { toast } from 'react-toastify';
 import {
   BarChart,
@@ -74,7 +75,7 @@ const BookingDetails = () => {
     const updatedLawyers = bookedLawyers.filter((lawyer) => lawyer.id !== id);
     setBookedLawyers(updatedLawyers);
     localStorage.setItem('bookedLawyers', JSON.stringify(updatedLawyers));
-    toast.success('Appointment cancelled successfully!');
+    toast.success(`${id.name}Appointment cancelled successfully!`);
   };
 
   return (
@@ -126,7 +127,17 @@ const BookingDetails = () => {
           </div>
         ))
       ) : (
-        <p className="text-center text-gray-500">No bookings found.</p>
+        <div >
+            <h1 className="text-center text-gray-500 text-3xl font-bold">No bookings found.</h1>
+            
+            <div className='text-center mt-4 mb-2'>
+            <Link to='/'>
+                <button className='bg-green-500 px-5 py-2 text-white rounded text-center hover:cursor-pointer'>Go to Home</button>
+            </Link>
+            </div>
+            
+        </div>
+        
       )}
     </div>
   );

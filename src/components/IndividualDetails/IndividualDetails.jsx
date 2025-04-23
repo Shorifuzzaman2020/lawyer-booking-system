@@ -13,13 +13,13 @@ const IndividualDetails = () => {
 
         const isAlreadyBooked = existingBookings.some(lawyer => lawyer.id === bestlawyer.id);
         if (isAlreadyBooked) {
-            toast.warn('This lawyer is already booked!');
+            toast.warn(`${bestlawyer.name} lawyer is already booked!`);
             return;
         }
 
         const updatedBookings = [...existingBookings, bestlawyer];
         localStorage.setItem('bookedLawyers', JSON.stringify(updatedBookings));
-        toast.success('Appointment booked successfully!');
+        toast.success(`${bestlawyer.name} Appointment booked successfully!`);
 
         setTimeout(() => {
             navigate('/bookingDetails');

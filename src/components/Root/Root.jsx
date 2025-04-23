@@ -1,18 +1,24 @@
+
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
 const Root = () => {
-    return (
-        <div>
-            <ToastContainer position="top-right" autoClose={3000} />
-            <Header></Header>
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-    );
+  const location = useLocation();
+
+  const shouldHideFooter = location.pathname === '/errorPage';
+
+  return (
+    <div>
+      <ToastContainer position="top-right" autoClose={3000} />
+      <Header />
+      <Outlet />
+      {!shouldHideFooter && <Footer />}
+    </div>
+  );
 };
 
 export default Root;
+

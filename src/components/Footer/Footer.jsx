@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { FaFacebookF, FaLinkedinIn, FaXTwitter, FaYoutube } from 'react-icons/fa6';
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -15,10 +16,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>My-Bookings</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Contact Us</a></li>
+                    <Link to='/'><li><a>Home</a></li></Link>
+                    <Link to='bookingDetails'><li><a>My-Bookings</a></li></Link>
+                    <Link to='showBlogs'><li><a>Blogs</a></li></Link>
+                    <Link to='errorPage'><li><a>Contact Us</a></li></Link>
                 </ul>
             </aside>
             <nav>
