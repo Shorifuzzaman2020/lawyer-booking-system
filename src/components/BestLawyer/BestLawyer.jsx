@@ -10,7 +10,9 @@ const BestLawyer = ({ bestlawyer }) => {
     };
 
     return (
+        
         <div className='mt-8 text-center'>
+            
             <div className="card card-side bg-base-100 shadow-sm">
                 <figure className='p-4'>
                     <img
