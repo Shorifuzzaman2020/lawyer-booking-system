@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import {
   BarChart,
   Bar,
@@ -61,49 +61,72 @@ const IndividualConeChart = ({ data, gradient }) => (
 );
 
 const BookingDetails = () => {
-  const bookedLawyers = useLoaderData();
+  const [bookedLawyers, setBookedLawyers] = useState([]);
+
+  useEffect(() => {
+    const savedLawyers = localStorage.getItem('bookedLawyers');
+    if (savedLawyers) {
+      setBookedLawyers(JSON.parse(savedLawyers));
+    }
+  }, []);
+
+  const handleCancel = (id) => {
+    const updatedLawyers = bookedLawyers.filter((lawyer) => lawyer.id !== id);
+    setBookedLawyers(updatedLawyers);
+    localStorage.setItem('bookedLawyers', JSON.stringify(updatedLawyers));
+    toast.success('Appointment cancelled successfully!');
+  };
 
   return (
     <div className="w-11/12 mx-auto mt-5">
-      <h1 className="text-3xl font-bold mb-4">My Bookings</h1>
+      <h1 className="text-3xl font-bold text-center mb-4">My Today Appointments</h1>
+      <p className="text-center mb-4">
+        Our platform connects you with verified, experienced Lawyers across various specialties — all at your convenience.
+      </p>
 
-      {/* 🔷 Chart Container with Border */}
-      <div className="border-2 border-blue-400 p-4 rounded-md mb-10">
-        <div className="flex flex-wrap justify-center gap-6">
-          {bookedLawyers.map((lawyer, index) => (
-            <IndividualConeChart
-              key={lawyer.id}
-              data={[{ name: lawyer.name, fee: lawyer.consultation_fee }]}
-              gradient={gradients[index % gradients.length]}
-            />
-          ))}
+      {bookedLawyers.length > 0 && (
+        <div className="border-2 border-blue-400 p-4 rounded-md mb-10">
+          <div className="flex flex-wrap justify-center gap-6">
+            {bookedLawyers.map((lawyer, index) => (
+              <IndividualConeChart
+                key={lawyer.id}
+                data={[{ name: lawyer.name, fee: lawyer.consultation_fee }]}
+                gradient={gradients[index % gradients.length]}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Booking List */}
       {bookedLawyers.length > 0 ? (
         bookedLawyers.map((lawyer) => (
           <div
             key={lawyer.id}
             className="card card-side bg-base-100 shadow-md mb-4"
           >
-            <figure className="p-4">
-              <img
-                src={lawyer.image}
-                alt={lawyer.name}
-                className="w-36 h-36 object-cover rounded-xl"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="text-xl font-bold">{lawyer.name}</h2>
-              <p>{lawyer.experience}+ Years Experience</p>
-              <p>License No: {lawyer.licence_number}</p>
-              <p>Fee: ৳{lawyer.consultation_fee}</p>
+            <div className="card-body mx-6">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h2 className="text-xl font-bold">{lawyer.name}</h2>
+                  <p>{lawyer.criminal_expert ? 'Criminal Expert' : ''}</p>
+                </div>
+                <div>
+                  <p>Consultation Fee: {lawyer.consultation_fee} Taka</p>
+                </div>
+              </div>
+              <div className="text-center mt-4">
+                <button
+                  onClick={() => handleCancel(lawyer.id)}
+                  className="bg-red-100 text-red-600 rounded-full px-10 py-2 hover:cursor-pointer hover:bg-red-200 transition"
+                >
+                  Cancel Appointment
+                </button>
+              </div>
             </div>
           </div>
         ))
       ) : (
-        <p>No bookings found.</p>
+        <p className="text-center text-gray-500">No bookings found.</p>
       )}
     </div>
   );

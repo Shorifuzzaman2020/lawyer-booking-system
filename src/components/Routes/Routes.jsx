@@ -8,6 +8,8 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Home from '../pages/Home/Home';
 import IndividualDetails from '../IndividualDetails/IndividualDetails';
 import BookingDetails from '../BookingDetails/BookingDetails';
+import Blogs from '../Blogs/Blogs';
+import ErrorDesign from '../ErrorDesign/ErrorDesign';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,15 @@ const router = createBrowserRouter([
         },
         Component: BookingDetails,
         errorElement: <ErrorPage />
+      },
+      {
+        path:'/showBlogs',
+        Component: Blogs,
+        errorElement: <ErrorPage />
+      },
+      {
+        path:'/errorPage',
+        Component:ErrorDesign,
       }
       
     ]
