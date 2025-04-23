@@ -5,7 +5,7 @@ const ErrorDesign = () => {
     return (
         <div className='text-center'>
             <div className="flex justify-center">
-                <img src="public/assets/errorimage.jpg" alt="Error" />
+                <img src="/assets/errorimage.jpg" alt="Error" />
             </div>
 
             <h1 className='text-2xl font-bold text-red-500'>404-Page Not Found</h1>
