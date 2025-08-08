@@ -39,13 +39,9 @@ A React-based Lawyer Booking Platform allowing users to browse lawyers, view det
    git clone https://github.com/YourUsername/your-repo-name.git
    cd your-repo-name
 2. Install dependencies
-npm install
-# or
-yarn
+- npm install
 3. Start the development server
-npm start
-# or
-yarn start
+- npm start
 Open http://localhost:3000 to view in the browser.
 
 Live Demo
