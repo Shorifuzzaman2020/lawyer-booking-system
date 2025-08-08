@@ -1,12 +1,53 @@
-# React + Vite
+# Lawyer Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Screenshot](https://i.ibb.co.com/J8TGdqN/Screenshot-2025-08-08-183425.jpg)  
 
-Currently, two official plugins are available:
+## Project Overview
+A React-based Lawyer Booking Platform allowing users to browse lawyers, view detailed profiles, and book services. It features dynamic routing with data loaders, localStorage persistence, a blog section, and a responsive, animated navigation bar for enhanced user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React.js
+- React Router DOM (v6.4+ with loaders)
+- Tailwind CSS & DaisyUI
+- LocalStorage API
+- Vite / Create React App (whichever you used)
 
-## Expanding the ESLint configuration
+## Core Features
+- Browse and search lawyers
+- View individual lawyer profiles with details
+- Book lawyers and manage bookings saved in localStorage
+- Blog section with articles and updates
+- Responsive navbar with loading animations
+- Error handling with custom error pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Dependencies
+- react
+- react-dom
+- react-router-dom
+- tailwindcss
+- daisyui
+- (optional) any additional libraries you used (e.g., axios, react-hook-form)
+
+## Getting Started
+
+### Prerequisites
+- Node.js and npm/yarn installed
+
+### Installation & Running Locally
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/YourUsername/your-repo-name.git
+   cd your-repo-name
+2. Install dependencies
+npm install
+# or
+yarn
+3. Start the development server
+npm start
+# or
+yarn start
+Open http://localhost:3000 to view in the browser.
+
+Live Demo
+[https://lawyere-yard.surge.sh/]
+
